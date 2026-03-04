@@ -13,7 +13,7 @@
   --color-surface: #111827;
   --color-surface-light: #1f2937;
   --color-gray-light: #f0f1f5;
-  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-sans: 'Poppins', system-ui, -apple-system, sans-serif;
 }
 
 @layer base {

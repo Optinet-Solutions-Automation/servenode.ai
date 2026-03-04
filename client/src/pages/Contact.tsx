@@ -276,7 +276,7 @@ export default function Contact() {
                                 value={form.name}
                                 onChange={(e) => setForm({ ...form, name: e.target.value })}
                                 className="w-full pl-11 pr-4 py-3 rounded-xl bg-white/5 border border-gray-800 text-white placeholder-gray-600 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all"
-                                placeholder="John Doe"
+                                placeholder="Enter your name"
                               />
                             </div>
                           </div>
@@ -293,7 +293,7 @@ export default function Contact() {
                                 value={form.email}
                                 onChange={(e) => setForm({ ...form, email: e.target.value })}
                                 className="w-full pl-11 pr-4 py-3 rounded-xl bg-white/5 border border-gray-800 text-white placeholder-gray-600 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all"
-                                placeholder="john@company.com"
+                                placeholder="Enter your email"
                               />
                             </div>
                           </div>
@@ -309,7 +309,7 @@ export default function Contact() {
                                 value={form.phone}
                                 onChange={(e) => setForm({ ...form, phone: e.target.value })}
                                 className="w-full pl-11 pr-4 py-3 rounded-xl bg-white/5 border border-gray-800 text-white placeholder-gray-600 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all"
-                                placeholder="+1 (555) 000-0000"
+                                placeholder="Enter your phone number"
                               />
                             </div>
                           </div>
@@ -342,7 +342,7 @@ export default function Contact() {
                                 value={form.company}
                                 onChange={(e) => setForm({ ...form, company: e.target.value })}
                                 className="w-full pl-11 pr-4 py-3 rounded-xl bg-white/5 border border-gray-800 text-white placeholder-gray-600 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all"
-                                placeholder="Acme Inc."
+                                placeholder="Enter your company name"
                               />
                             </div>
                           </div>
@@ -643,8 +643,7 @@ export default function Contact() {
                 <h4 className="font-bold text-white mb-6">Contact Information</h4>
                 <div className="space-y-4">
                   {[
-                    { icon: Mail, label: 'hello@servenode.ai', href: 'mailto:hello@servenode.ai' },
-                    { icon: Phone, label: '+1 (555) 000-0000', href: 'tel:+15550000000' },
+                    { icon: Mail, label: 'sales@servenode.io', href: 'mailto:sales@servenode.io' },
                     { icon: MapPin, label: 'Remote-first, serving clients worldwide' },
                   ].map((item) => (
                     <div key={item.label} className="flex items-center gap-3 group">
