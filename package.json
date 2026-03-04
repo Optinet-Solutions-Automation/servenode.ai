@@ -7,7 +7,7 @@
     "dev": "concurrently \"npm run server\" \"npm run client\"",
     "client": "cd client && npm run dev",
     "server": "tsx watch server/index.ts",
-    "build": "cd client && npm run build",
+    "build": "cd client && npm install && npm run build",
     "start": "NODE_ENV=production tsx server/index.ts"
   },
   "keywords": [],
