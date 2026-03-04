@@ -157,7 +157,7 @@ export default function FinalCTA() {
                 transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut' }}
               />
               <motion.span
-                whileHover={{ scale: 1.07, boxShadow: '0 0 40px rgba(148,163,184,0.3)' }}
+                whileHover={{ scale: 1.07, boxShadow: '0 0 40px rgba(99,102,241,0.3)' }}
                 whileTap={{ scale: 0.96 }}
                 className="relative btn-primary text-lg px-12 py-5"
               >

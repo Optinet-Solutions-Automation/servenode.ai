@@ -9,29 +9,29 @@ export default function LogoCarousel() {
   return (
     <section className="relative py-20 overflow-hidden">
       {/* Deep dark background with grid */}
-      <div className="absolute inset-0 bg-[#09090b]" />
+      <div className="absolute inset-0 bg-[#030712]" />
       <div className="absolute inset-0 grid-bg opacity-30" />
 
       {/* Animated horizontal scan line */}
       <motion.div
-        className="absolute left-0 right-0 h-px bg-gradient-to-r from-transparent via-slate-300/50 to-transparent"
+        className="absolute left-0 right-0 h-px bg-gradient-to-r from-transparent via-cyan-500/50 to-transparent"
         animate={{ top: ['0%', '100%', '0%'] }}
         transition={{ duration: 8, repeat: Infinity, ease: 'linear' }}
       />
 
       {/* Top/bottom neon border lines */}
-      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-slate-400/40 to-transparent" />
-      <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-slate-300/40 to-transparent" />
+      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-indigo-500/40 to-transparent" />
+      <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-cyan-500/40 to-transparent" />
 
       {/* Fade edges - dark */}
-      <div className="absolute left-0 top-0 bottom-0 w-40 bg-gradient-to-r from-[#09090b] via-[#09090b]/80 to-transparent z-10" />
-      <div className="absolute right-0 top-0 bottom-0 w-40 bg-gradient-to-l from-[#09090b] via-[#09090b]/80 to-transparent z-10" />
+      <div className="absolute left-0 top-0 bottom-0 w-40 bg-gradient-to-r from-[#030712] via-[#030712]/80 to-transparent z-10" />
+      <div className="absolute right-0 top-0 bottom-0 w-40 bg-gradient-to-l from-[#030712] via-[#030712]/80 to-transparent z-10" />
 
       {/* Floating particles */}
       {[...Array(6)].map((_, i) => (
         <motion.div
           key={i}
-          className="absolute w-1 h-1 rounded-full bg-slate-400/30"
+          className="absolute w-1 h-1 rounded-full bg-indigo-500/30"
           style={{ left: `${15 + i * 15}%`, top: `${20 + (i % 3) * 25}%` }}
           animate={{
             y: [0, -20, 0],
@@ -55,7 +55,7 @@ export default function LogoCarousel() {
             whileInView={{ scaleX: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: 0.3 }}
-            className="w-16 h-px bg-gradient-to-r from-slate-400 to-slate-300 mx-auto mb-6"
+            className="w-16 h-px bg-gradient-to-r from-indigo-500 to-cyan-500 mx-auto mb-6"
           />
           <p className="text-xs font-medium text-gray-500 uppercase tracking-[0.3em]">
             Trusted by{' '}
@@ -79,22 +79,22 @@ export default function LogoCarousel() {
               {hoveredIndex === i && (
                 <motion.div
                   layoutId="logo-glow"
-                  className="absolute -inset-1 bg-gradient-to-r from-slate-400/20 via-slate-300/20 to-slate-400/20 rounded-xl blur-md"
+                  className="absolute -inset-1 bg-gradient-to-r from-indigo-500/20 via-cyan-500/20 to-indigo-500/20 rounded-xl blur-md"
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   exit={{ opacity: 0 }}
                 />
               )}
-              <span className="relative text-gray-500 group-hover:text-slate-300 font-semibold text-sm transition-colors duration-500 drop-shadow-[0_0_8px_rgba(6,182,212,0)]  group-hover:drop-shadow-[0_0_8px_rgba(6,182,212,0.5)]">
+              <span className="relative text-gray-500 group-hover:text-cyan-400 font-semibold text-sm transition-colors duration-500 drop-shadow-[0_0_8px_rgba(6,182,212,0)]  group-hover:drop-shadow-[0_0_8px_rgba(6,182,212,0.5)]">
                 {logo}
               </span>
 
               {/* Corner accents on hover */}
               <motion.div
-                className="absolute top-0 left-0 w-2 h-2 border-t border-l border-slate-300/0 group-hover:border-slate-300/60 transition-all duration-500"
+                className="absolute top-0 left-0 w-2 h-2 border-t border-l border-cyan-500/0 group-hover:border-cyan-500/60 transition-all duration-500"
               />
               <motion.div
-                className="absolute bottom-0 right-0 w-2 h-2 border-b border-r border-slate-400/0 group-hover:border-slate-400/60 transition-all duration-500"
+                className="absolute bottom-0 right-0 w-2 h-2 border-b border-r border-indigo-500/0 group-hover:border-indigo-500/60 transition-all duration-500"
               />
             </motion.div>
           ))}

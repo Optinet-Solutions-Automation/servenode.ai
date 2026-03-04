@@ -37,7 +37,7 @@ export default function Navbar() {
       transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
         scrolled
-          ? 'bg-[#09090b]/80 backdrop-blur-xl border-b border-white/5 shadow-lg shadow-[#94a3b8]/5'
+          ? 'bg-[#030712]/80 backdrop-blur-xl border-b border-white/5 shadow-lg shadow-[#6366f1]/5'
           : 'bg-transparent'
       }`}
     >
@@ -48,7 +48,7 @@ export default function Navbar() {
         animate={{ scaleX: scrolled ? 1 : 0 }}
         transition={{ duration: 0.6, ease: 'easeInOut' }}
       >
-        <div className="h-full bg-gradient-to-r from-transparent via-[#94a3b8]/40 to-transparent" />
+        <div className="h-full bg-gradient-to-r from-transparent via-[#6366f1]/40 to-transparent" />
       </motion.div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -58,10 +58,10 @@ export default function Navbar() {
             <motion.div
               whileHover={{ scale: 1.1, rotate: 5 }}
               whileTap={{ scale: 0.95 }}
-              className="relative w-8 h-8 rounded-lg bg-gradient-to-br from-[#94a3b8] to-[#cbd5e1] flex items-center justify-center shadow-lg shadow-[#94a3b8]/30"
+              className="relative w-8 h-8 rounded-lg bg-gradient-to-br from-[#6366f1] to-[#06b6d4] flex items-center justify-center shadow-lg shadow-[#6366f1]/30"
             >
               <motion.div
-                className="absolute inset-0 rounded-lg bg-gradient-to-br from-[#94a3b8] to-[#cbd5e1] blur-md opacity-0 group-hover:opacity-60"
+                className="absolute inset-0 rounded-lg bg-gradient-to-br from-[#6366f1] to-[#06b6d4] blur-md opacity-0 group-hover:opacity-60"
                 animate={{ opacity: [0, 0.4, 0] }}
                 transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut' }}
               />
@@ -80,7 +80,7 @@ export default function Navbar() {
               onMouseEnter={() => setServicesOpen(true)}
               onMouseLeave={() => setServicesOpen(false)}
             >
-              <button className="flex items-center gap-1 px-4 py-2 text-sm font-medium text-gray-400 hover:text-[#e2e8f0] transition-all duration-300 rounded-lg hover:bg-white/5">
+              <button className="flex items-center gap-1 px-4 py-2 text-sm font-medium text-gray-400 hover:text-[#22d3ee] transition-all duration-300 rounded-lg hover:bg-white/5">
                 Services
                 <ChevronDown
                   className={`w-4 h-4 transition-transform duration-300 ${servicesOpen ? 'rotate-180' : ''}`}
@@ -96,7 +96,7 @@ export default function Navbar() {
                     className="absolute top-full left-0 mt-2 w-56 glass rounded-xl py-2 shadow-2xl shadow-black/50 animated-border overflow-hidden"
                   >
                     {/* Dropdown glow accent */}
-                    <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#94a3b8]/50 to-transparent" />
+                    <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#6366f1]/50 to-transparent" />
                     {services.map((service, i) => (
                       <motion.div
                         key={service.name}
@@ -106,7 +106,7 @@ export default function Navbar() {
                       >
                         <Link
                           to={service.href}
-                          className="block px-4 py-2.5 text-sm text-gray-200 hover:text-[#e2e8f0] hover:bg-white/5 transition-all duration-300 hover:pl-6"
+                          className="block px-4 py-2.5 text-sm text-gray-200 hover:text-[#22d3ee] hover:bg-white/5 transition-all duration-300 hover:pl-6"
                         >
                           {service.name}
                         </Link>
@@ -124,21 +124,21 @@ export default function Navbar() {
                 className={`relative px-4 py-2 text-sm font-medium transition-all duration-300 rounded-lg ${
                   location.pathname === link.href
                     ? 'text-white'
-                    : 'text-gray-400 hover:text-[#e2e8f0] hover:bg-white/5'
+                    : 'text-gray-400 hover:text-[#22d3ee] hover:bg-white/5'
                 }`}
               >
                 {link.name}
                 {location.pathname === link.href && (
                   <motion.div
                     layoutId="activeNav"
-                    className="absolute bottom-0 left-2 right-2 h-[2px] bg-gradient-to-r from-[#94a3b8] to-[#cbd5e1] rounded-full"
+                    className="absolute bottom-0 left-2 right-2 h-[2px] bg-gradient-to-r from-[#6366f1] to-[#06b6d4] rounded-full"
                     transition={{ type: 'spring', stiffness: 300, damping: 30 }}
                   />
                 )}
                 {location.pathname === link.href && (
                   <motion.div
                     layoutId="activeNavGlow"
-                    className="absolute bottom-0 left-2 right-2 h-[2px] bg-gradient-to-r from-[#94a3b8] to-[#cbd5e1] blur-sm rounded-full"
+                    className="absolute bottom-0 left-2 right-2 h-[2px] bg-gradient-to-r from-[#6366f1] to-[#06b6d4] blur-sm rounded-full"
                     transition={{ type: 'spring', stiffness: 300, damping: 30 }}
                   />
                 )}
@@ -148,7 +148,7 @@ export default function Navbar() {
             <div className="ml-4">
               <Link to="/contact" className="group relative inline-block">
                 <motion.div
-                  className="absolute -inset-0.5 bg-gradient-to-r from-[#94a3b8] to-[#cbd5e1] rounded-xl blur opacity-30 group-hover:opacity-70 transition-all duration-500"
+                  className="absolute -inset-0.5 bg-gradient-to-r from-[#6366f1] to-[#06b6d4] rounded-xl blur opacity-30 group-hover:opacity-70 transition-all duration-500"
                   animate={{ opacity: [0.2, 0.4, 0.2] }}
                   transition={{ duration: 3, repeat: Infinity, ease: 'easeInOut' }}
                 />
@@ -167,7 +167,7 @@ export default function Navbar() {
           <motion.button
             whileTap={{ scale: 0.9, rotate: 90 }}
             onClick={() => setMobileOpen(!mobileOpen)}
-            className="lg:hidden p-2 text-gray-400 hover:text-[#e2e8f0] transition-colors duration-300"
+            className="lg:hidden p-2 text-gray-400 hover:text-[#22d3ee] transition-colors duration-300"
           >
             <AnimatePresence mode="wait">
               {mobileOpen ? (
@@ -204,10 +204,10 @@ export default function Navbar() {
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
-            className="lg:hidden bg-[#09090b]/95 backdrop-blur-xl border-t border-white/5 overflow-hidden"
+            className="lg:hidden bg-[#030712]/95 backdrop-blur-xl border-t border-white/5 overflow-hidden"
           >
             {/* Mobile menu glow line */}
-            <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#94a3b8]/40 to-transparent" />
+            <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#6366f1]/40 to-transparent" />
 
             <div className="px-4 py-6 space-y-1">
               {[{ name: 'Services', href: '/services' }, ...navLinks].map((link, i) => (
@@ -222,7 +222,7 @@ export default function Navbar() {
                     className={`block px-4 py-3 text-sm font-medium rounded-lg transition-all duration-300 ${
                       location.pathname === link.href
                         ? 'text-white bg-white/5 glow-border'
-                        : 'text-gray-400 hover:text-[#e2e8f0] hover:bg-white/5 hover:pl-6'
+                        : 'text-gray-400 hover:text-[#22d3ee] hover:bg-white/5 hover:pl-6'
                     }`}
                   >
                     {link.name}

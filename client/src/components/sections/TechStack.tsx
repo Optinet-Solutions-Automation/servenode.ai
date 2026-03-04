@@ -53,7 +53,7 @@ export default function TechStack() {
                     {category.tools.map((tool) => (
                       <motion.span
                         key={tool}
-                        whileHover={{ scale: 1.05, borderColor: 'rgba(148, 163, 184, 0.5)' }}
+                        whileHover={{ scale: 1.05, borderColor: 'rgba(99, 102, 241, 0.5)' }}
                         className="inline-flex items-center px-3 py-1.5 bg-white/5 rounded-lg text-sm text-gray-300 border border-gray-800 transition-colors cursor-default"
                       >
                         {tool}
