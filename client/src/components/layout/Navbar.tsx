@@ -11,9 +11,7 @@ const services = [
 ]
 
 const navLinks = [
-  { name: 'Results', href: '/case-studies' },
   { name: 'About Us', href: '/about' },
-  { name: 'Blog', href: '/blog' },
 ]
 
 export default function Navbar() {
@@ -108,7 +106,7 @@ export default function Navbar() {
                       >
                         <Link
                           to={service.href}
-                          className="block px-4 py-2.5 text-sm text-gray-400 hover:text-[#22d3ee] hover:bg-white/5 transition-all duration-300 hover:pl-6"
+                          className="block px-4 py-2.5 text-sm text-gray-200 hover:text-[#22d3ee] hover:bg-white/5 transition-all duration-300 hover:pl-6"
                         >
                           {service.name}
                         </Link>

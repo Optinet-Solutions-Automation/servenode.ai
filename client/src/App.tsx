@@ -1,14 +1,11 @@
 import { Routes, Route, useLocation } from 'react-router-dom'
 import { AnimatePresence } from 'framer-motion'
 import Navbar from './components/layout/Navbar'
-import Footer from './components/layout/Footer'
 import ChatWidget from './components/ui/ChatWidget'
 import PageTransition from './components/ui/PageTransition'
 import Home from './pages/Home'
-import CaseStudies from './pages/CaseStudies'
 import Services from './pages/Services'
 import About from './pages/About'
-import Blog from './pages/Blog'
 import Contact from './pages/Contact'
 
 function App() {
@@ -21,15 +18,12 @@ function App() {
         <AnimatePresence mode="wait">
           <Routes location={location} key={location.pathname}>
             <Route path="/" element={<PageTransition><Home /></PageTransition>} />
-            <Route path="/case-studies" element={<PageTransition><CaseStudies /></PageTransition>} />
             <Route path="/services" element={<PageTransition><Services /></PageTransition>} />
             <Route path="/about" element={<PageTransition><About /></PageTransition>} />
-            <Route path="/blog" element={<PageTransition><Blog /></PageTransition>} />
             <Route path="/contact" element={<PageTransition><Contact /></PageTransition>} />
           </Routes>
         </AnimatePresence>
       </main>
-      <Footer />
       <ChatWidget />
     </div>
   )

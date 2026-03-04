@@ -263,16 +263,6 @@ export default function Hero() {
               Free Consultation <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </span>
           </Link>
-          <Link
-            to="/case-studies"
-            className="group inline-flex items-center gap-2 px-8 py-4 rounded-xl text-gray-300 font-semibold border border-gray-700/50 hover:border-indigo-500/50 hover:text-white transition-all duration-300"
-            style={{
-              background: 'rgba(255,255,255,0.03)',
-              backdropFilter: 'blur(8px)',
-            }}
-          >
-            View Our Results <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-          </Link>
         </motion.div>
 
         {/* Trust badges */}

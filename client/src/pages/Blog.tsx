@@ -31,7 +31,10 @@ export default function Blog() {
       </section>
 
       {/* Blog Grid */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+      <section className="relative py-20">
+        <div className="absolute inset-0 bg-surface" />
+        <div className="absolute inset-0 grid-bg" />
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {blogPosts.map((post, index) => (
             <motion.article
@@ -46,7 +49,7 @@ export default function Blog() {
                 {/* Placeholder image */}
                 <div className="h-48 bg-gradient-to-br from-primary/10 via-surface to-accent/10 flex items-center justify-center relative overflow-hidden">
                   <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-accent/5 opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
-                  <span className="text-3xl font-bold text-primary/20">{post.category}</span>
+                  <span className="text-3xl font-bold text-white/80">{post.category}</span>
                 </div>
                 <div className="p-6">
                   <div className="flex items-center gap-3 mb-3">
@@ -72,6 +75,7 @@ export default function Blog() {
               </div>
             </motion.article>
           ))}
+        </div>
         </div>
       </section>
     </div>

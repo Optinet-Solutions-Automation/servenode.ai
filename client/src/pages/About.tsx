@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion'
 import { ArrowRight, CheckCircle, Sparkles } from 'lucide-react'
 import { Link } from 'react-router-dom'
-import { teamMembers, advantages, quotes } from '../data/content'
+import { advantages, quotes } from '../data/content'
 
 export default function About() {
   return (
@@ -84,47 +84,6 @@ export default function About() {
               <p className="text-sm font-semibold text-gradient">{quotes[0].author}</p>
               <p className="text-sm text-gray-500 mt-1">{quotes[0].role}</p>
             </motion.div>
-          </div>
-        </div>
-      </section>
-
-      {/* Team */}
-      <section className="relative py-20 overflow-hidden">
-        <div className="absolute inset-0 bg-navy" />
-        <div className="absolute inset-0 grid-bg" />
-
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="section-title text-white mb-4">Meet Our <span className="text-gradient">Team</span></h2>
-            <p className="section-subtitle mx-auto">
-              Experienced professionals dedicated to transforming your operations.
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {teamMembers.map((member, index) => (
-              <motion.div
-                key={member.name}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.1, duration: 0.6 }}
-                className="group"
-              >
-                <div className="glass rounded-2xl p-8 card-hover glow-border">
-                  <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-primary/20 to-accent/20 border border-primary/20 flex items-center justify-center mb-5">
-                    <span className="text-2xl font-bold text-gradient">
-                      {member.name.split(' ').map(n => n[0]).join('')}
-                    </span>
-                  </div>
-                  <h3 className="text-lg font-bold text-white">{member.name}</h3>
-                  <p className="text-accent text-sm font-medium mb-3">{member.role}</p>
-                  <span className="inline-flex items-center px-3 py-1 bg-primary/10 border border-primary/20 text-primary text-xs font-semibold rounded-full mb-4">
-                    {member.badge}
-                  </span>
-                  <p className="text-gray-400 text-sm leading-relaxed">{member.bio}</p>
-                </div>
-              </motion.div>
-            ))}
           </div>
         </div>
       </section>

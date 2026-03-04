@@ -101,17 +101,9 @@ export default function Quotes() {
                 transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
                 className="text-center w-full relative"
               >
-                <p className="text-xl md:text-2xl lg:text-3xl text-white font-medium leading-relaxed mb-8">
+                <p className="text-xl md:text-2xl lg:text-3xl text-white font-medium leading-relaxed">
                   "{quotes[current].text}"
                 </p>
-                <motion.div
-                  initial={{ opacity: 0, y: 10 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.3, duration: 0.5 }}
-                >
-                  <p className="text-sm font-semibold text-gradient">{quotes[current].author}</p>
-                  <p className="text-sm text-gray-500 mt-1">{quotes[current].role}</p>
-                </motion.div>
               </motion.div>
             </AnimatePresence>
 
