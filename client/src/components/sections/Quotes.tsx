@@ -110,7 +110,7 @@ export default function Quotes() {
             {/* Navigation */}
             <div className="absolute bottom-6 left-0 right-0 flex items-center justify-center gap-6">
               <motion.button
-                whileHover={{ scale: 1.3, boxShadow: '0 0 20px rgba(99,102,241,0.3)' }}
+                whileHover={{ scale: 1.3, boxShadow: '0 0 20px rgba(148,163,184,0.3)' }}
                 whileTap={{ scale: 0.85 }}
                 onClick={prev}
                 className="p-1.5 rounded-lg hover:bg-white/5 transition-colors"
@@ -127,7 +127,7 @@ export default function Quotes() {
                       i === current ? 'w-8 bg-primary' : 'w-2 bg-gray-700 hover:bg-gray-600'
                     }`}
                     animate={i === current ? {
-                      boxShadow: ['0 0 4px rgba(99,102,241,0.4)', '0 0 12px rgba(99,102,241,0.7)', '0 0 4px rgba(99,102,241,0.4)'],
+                      boxShadow: ['0 0 4px rgba(148,163,184,0.4)', '0 0 12px rgba(148,163,184,0.7)', '0 0 4px rgba(148,163,184,0.4)'],
                     } : {}}
                     transition={{ duration: 2, repeat: Infinity }}
                   />
@@ -135,7 +135,7 @@ export default function Quotes() {
               </div>
 
               <motion.button
-                whileHover={{ scale: 1.3, boxShadow: '0 0 20px rgba(99,102,241,0.3)' }}
+                whileHover={{ scale: 1.3, boxShadow: '0 0 20px rgba(148,163,184,0.3)' }}
                 whileTap={{ scale: 0.85 }}
                 onClick={next}
                 className="p-1.5 rounded-lg hover:bg-white/5 transition-colors"

@@ -37,7 +37,7 @@ function ParticleField() {
       {particles.map((p) => (
         <motion.div
           key={p.id}
-          className="absolute rounded-full bg-indigo-400/30"
+          className="absolute rounded-full bg-slate-400/30"
           style={{
             left: `${p.x}%`,
             top: `${p.y}%`,
@@ -66,7 +66,7 @@ function GridPattern() {
       <div
         className="absolute inset-0 opacity-[0.04]"
         style={{
-          backgroundImage: `linear-gradient(rgba(99,102,241,0.3) 1px, transparent 1px), linear-gradient(90deg, rgba(99,102,241,0.3) 1px, transparent 1px)`,
+          backgroundImage: `linear-gradient(rgba(148,163,184,0.3) 1px, transparent 1px), linear-gradient(90deg, rgba(148,163,184,0.3) 1px, transparent 1px)`,
           backgroundSize: '60px 60px',
         }}
       />
@@ -74,7 +74,7 @@ function GridPattern() {
       <motion.div
         className="absolute inset-0"
         style={{
-          background: 'linear-gradient(90deg, transparent 0%, rgba(6,182,212,0.05) 50%, transparent 100%)',
+          background: 'linear-gradient(90deg, transparent 0%, rgba(203,213,225,0.05) 50%, transparent 100%)',
           backgroundSize: '200% 100%',
         }}
         animate={{
@@ -95,7 +95,7 @@ function ScanLine() {
     <motion.div
       className="absolute left-0 right-0 h-[2px] pointer-events-none z-20"
       style={{
-        background: 'linear-gradient(90deg, transparent, rgba(6,182,212,0.15), rgba(99,102,241,0.15), transparent)',
+        background: 'linear-gradient(90deg, transparent, rgba(203,213,225,0.15), rgba(148,163,184,0.15), transparent)',
       }}
       animate={{
         top: ['-2px', '100%'],
@@ -128,17 +128,17 @@ export default function Hero() {
   return (
     <section
       className="relative min-h-screen flex items-center justify-center overflow-hidden"
-      style={{ background: 'linear-gradient(135deg, #030712 0%, #0f172a 50%, #030712 100%)' }}
+      style={{ background: 'linear-gradient(135deg, #09090b 0%, #18181b 50%, #09090b 100%)' }}
       onMouseMove={handleMouseMove}
     >
       {/* Grid pattern background */}
       <GridPattern />
 
       {/* Gradient Orbs */}
-      <FloatingOrb className="w-[600px] h-[600px] bg-indigo-500/20 -top-40 -right-40" />
-      <FloatingOrb className="w-[500px] h-[500px] bg-cyan-500/15 -bottom-40 -left-40" delay={2} />
-      <FloatingOrb className="w-[300px] h-[300px] bg-indigo-400/10 top-1/3 left-1/4" delay={4} />
-      <FloatingOrb className="w-[200px] h-[200px] bg-cyan-400/10 top-1/4 right-1/3" delay={6} />
+      <FloatingOrb className="w-[600px] h-[600px] bg-slate-400/20 -top-40 -right-40" />
+      <FloatingOrb className="w-[500px] h-[500px] bg-slate-300/15 -bottom-40 -left-40" delay={2} />
+      <FloatingOrb className="w-[300px] h-[300px] bg-slate-400/10 top-1/3 left-1/4" delay={4} />
+      <FloatingOrb className="w-[200px] h-[200px] bg-slate-300/10 top-1/4 right-1/3" delay={6} />
 
       <ParticleField />
 
@@ -149,7 +149,7 @@ export default function Hero() {
       <div
         className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] pointer-events-none"
         style={{
-          background: 'radial-gradient(circle, rgba(99,102,241,0.08) 0%, transparent 70%)',
+          background: 'radial-gradient(circle, rgba(148,163,184,0.08) 0%, transparent 70%)',
         }}
       />
 
@@ -165,17 +165,17 @@ export default function Hero() {
           className="mb-8"
         >
           <span
-            className="inline-flex items-center gap-2 px-5 py-2 rounded-full text-sm font-medium text-indigo-300 border border-indigo-500/20"
+            className="inline-flex items-center gap-2 px-5 py-2 rounded-full text-sm font-medium text-slate-300 border border-slate-400/20"
             style={{
-              background: 'rgba(99,102,241,0.08)',
+              background: 'rgba(148,163,184,0.08)',
               backdropFilter: 'blur(12px)',
-              boxShadow: '0 0 20px rgba(99,102,241,0.1), inset 0 0 20px rgba(99,102,241,0.05)',
+              boxShadow: '0 0 20px rgba(148,163,184,0.1), inset 0 0 20px rgba(148,163,184,0.05)',
             }}
           >
-            <Sparkles className="w-4 h-4 text-cyan-400" />
+            <Sparkles className="w-4 h-4 text-slate-300" />
             <span>#1 AI Solutions Agency</span>
             <motion.span
-              className="w-2 h-2 bg-emerald-400 rounded-full"
+              className="w-2 h-2 bg-slate-300 rounded-full"
               animate={{ opacity: [1, 0.3, 1], scale: [1, 0.8, 1] }}
               transition={{ duration: 1.5, repeat: Infinity, ease: 'easeInOut' }}
             />
@@ -204,17 +204,17 @@ export default function Hero() {
               style={
                 word === 'Businesses'
                   ? {
-                      background: 'linear-gradient(135deg, #6366f1, #06b6d4, #22d3ee)',
+                      background: 'linear-gradient(135deg, #94a3b8, #cbd5e1, #e2e8f0)',
                       WebkitBackgroundClip: 'text',
                       WebkitTextFillColor: 'transparent',
-                      filter: 'drop-shadow(0 0 20px rgba(99,102,241,0.4))',
+                      filter: 'drop-shadow(0 0 20px rgba(148,163,184,0.4))',
                     }
                   : word === 'Automate'
                   ? {
-                      background: 'linear-gradient(135deg, #22d3ee, #6366f1)',
+                      background: 'linear-gradient(135deg, #e2e8f0, #94a3b8)',
                       WebkitBackgroundClip: 'text',
                       WebkitTextFillColor: 'transparent',
-                      filter: 'drop-shadow(0 0 20px rgba(6,182,212,0.4))',
+                      filter: 'drop-shadow(0 0 20px rgba(203,213,225,0.4))',
                     }
                   : {}
               }
@@ -246,7 +246,7 @@ export default function Hero() {
             <motion.div
               className="absolute -inset-1 rounded-xl blur-lg"
               style={{
-                background: 'linear-gradient(90deg, #6366f1, #06b6d4, #22d3ee)',
+                background: 'linear-gradient(90deg, #94a3b8, #cbd5e1, #e2e8f0)',
               }}
               animate={{
                 opacity: [0.4, 0.7, 0.4],
@@ -256,8 +256,8 @@ export default function Hero() {
             <span
               className="relative inline-flex items-center gap-2 text-base font-semibold px-10 py-4 rounded-xl text-white"
               style={{
-                background: 'linear-gradient(135deg, #6366f1, #4f46e5)',
-                boxShadow: '0 0 30px rgba(99,102,241,0.3)',
+                background: 'linear-gradient(135deg, #94a3b8, #64748b)',
+                boxShadow: '0 0 30px rgba(148,163,184,0.3)',
               }}
             >
               Free Consultation <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
@@ -280,7 +280,7 @@ export default function Hero() {
               transition={{ delay: 1.6 + i * 0.15, duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
               whileHover={{
                 scale: 1.05,
-                boxShadow: '0 0 20px rgba(99,102,241,0.15)',
+                boxShadow: '0 0 20px rgba(148,163,184,0.15)',
               }}
               className="flex items-center gap-2 px-4 py-2 rounded-lg border border-gray-800/50"
               style={{
@@ -289,7 +289,7 @@ export default function Hero() {
               }}
             >
               <motion.span
-                className="w-2 h-2 bg-emerald-400 rounded-full"
+                className="w-2 h-2 bg-slate-300 rounded-full"
                 animate={{ opacity: [1, 0.3, 1] }}
                 transition={{ duration: 1.5, repeat: Infinity, ease: 'easeInOut', delay: i * 0.3 }}
               />
@@ -313,7 +313,7 @@ export default function Hero() {
             <motion.div
               animate={{ opacity: [0.3, 1, 0.3], scaleY: [0.5, 1, 0.5] }}
               transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut' }}
-              className="w-1 h-2 bg-indigo-500 rounded-full"
+              className="w-1 h-2 bg-slate-400 rounded-full"
             />
           </motion.div>
         </motion.div>

@@ -666,45 +666,6 @@ export default function Contact() {
                 </div>
               </div>
 
-              {/* Live activity indicator */}
-              <motion.div
-                className="glass rounded-2xl p-6 glow-border relative overflow-hidden"
-                initial={{ opacity: 0 }}
-                whileInView={{ opacity: 1 }}
-                viewport={{ once: true }}
-              >
-                <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-accent/5" />
-                <div className="relative">
-                  <div className="flex items-center gap-2 mb-4">
-                    <motion.div
-                      className="w-2 h-2 rounded-full bg-neon-green"
-                      animate={{ scale: [1, 1.3, 1], opacity: [0.7, 1, 0.7] }}
-                      transition={{ duration: 2, repeat: Infinity }}
-                    />
-                    <span className="text-xs font-medium text-neon-green">Live Activity</span>
-                  </div>
-                  <div className="space-y-3">
-                    {[
-                      { text: 'New consultation booked', time: '2 min ago' },
-                      { text: 'AI workflow deployed', time: '15 min ago' },
-                      { text: 'Client onboarded', time: '1 hour ago' },
-                    ].map((activity, i) => (
-                      <motion.div
-                        key={i}
-                        initial={{ opacity: 0, x: -10 }}
-                        whileInView={{ opacity: 1, x: 0 }}
-                        viewport={{ once: true }}
-                        transition={{ delay: 0.5 + i * 0.15 }}
-                        className="flex items-center justify-between text-xs"
-                      >
-                        <span className="text-gray-300">{activity.text}</span>
-                        <span className="text-gray-600">{activity.time}</span>
-                      </motion.div>
-                    ))}
-                  </div>
-                </div>
-              </motion.div>
-
               <div className="glass rounded-2xl p-8 glow-border relative overflow-hidden">
                 <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-accent/5" />
                 <div className="relative">

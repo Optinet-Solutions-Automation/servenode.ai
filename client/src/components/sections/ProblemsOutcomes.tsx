@@ -74,7 +74,7 @@ export default function ProblemsOutcomes() {
               </motion.div>
               <motion.div
                 className="glass rounded-xl px-6 py-3 text-center border-primary/20 border"
-                whileHover={{ borderColor: 'rgba(99,102,241,0.5)', boxShadow: '0 0 20px rgba(99,102,241,0.15)' }}
+                whileHover={{ borderColor: 'rgba(148,163,184,0.5)', boxShadow: '0 0 20px rgba(148,163,184,0.15)' }}
                 transition={{ duration: 0.3 }}
               >
                 <span className="text-xs font-bold text-primary uppercase tracking-wider">Solutions</span>
@@ -119,8 +119,8 @@ export default function ProblemsOutcomes() {
                 <motion.div
                   className="flex items-center gap-3 glass rounded-xl px-5 py-3.5 border-primary/10 border"
                   whileHover={{
-                    borderColor: 'rgba(99,102,241,0.4)',
-                    boxShadow: '0 0 25px rgba(99,102,241,0.1)',
+                    borderColor: 'rgba(148,163,184,0.4)',
+                    boxShadow: '0 0 25px rgba(148,163,184,0.1)',
                     x: 4,
                   }}
                   transition={{ duration: 0.3 }}
